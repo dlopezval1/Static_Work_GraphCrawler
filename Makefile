@@ -3,10 +3,10 @@ CXXFLAGS= -I$(HOME)/rapidjson/include
 LDFLAGS= -lcurl
 
 level_client: level_client.o
-        $(CXX) -o $@ $< $(LDFLAGS)
+	$(CXX) -o $@ $< $(LDFLAGS)
 
 level_client.o: level_client.cpp
-        $(CXX) $(CXXFLAGS) -c $< -o $@
+	$(CXX) $(CXXFLAGS) -c $< -o $@
 
 clean:
-        rm -f level_client level_client.o
+	rm -f level_client level_client.o
